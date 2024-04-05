@@ -231,7 +231,7 @@ class Hospital:
         if self.nameoftablets.get()=="" or self.ref.get()=="":
           messagebox.showerror("error", "all fields are required")
         else:
-            conn= mysql.connector.connect(host = "localhost", user = "root", password = "Jaggu@905796" , database = "student")
+            conn= mysql.connector.connect(host = "localhost", user = "root", password = "********" , database = "student")
             my_cursor = conn.cursor()
             my_cursor.execute("insert into hospital value(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",(
                                                                                                  self.nameoftablets.get(),
@@ -261,7 +261,7 @@ class Hospital:
             conn.close()
             messagebox.showinfo("success"," Record has been inserted")
     def fatch_data(self):
-         conn= mysql.connector.connect(host = "localhost", user = "root", password = "Jaggu@905796" , database = "student")
+         conn= mysql.connector.connect(host = "localhost", user = "root", password = "**********" , database = "student")
          my_cursor = conn.cursor()
          my_cursor.execute("select * from hospital")
          rows= my_cursor.fetchall()
